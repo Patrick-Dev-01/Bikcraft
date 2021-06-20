@@ -1,0 +1,25 @@
+/* Overflow Auto, para evitar scroll no eixo X em dispositivos Mobile */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: auto;
+}
+
+img{
+  display: block;
+  max-width: 100%;
+}
+
+li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+button{
+  cursor: pointer;
+}

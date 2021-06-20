@@ -1,0 +1,366 @@
+/* INTRODUÇÃO */
+
+.introduction{
+    width: 100%;
+    height: 380px;
+    background: url("../../public/bg.jpg") no-repeat center;
+    background-size: cover;
+    padding-top: 100px;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.introduction h1{
+    text-align: center;
+    font-size: 3em;
+    color: #fff;
+    font-family: Arial;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.blockquote{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.blockquote p{
+    font-size: 1em;
+    color: #fff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    max-width: 320px;
+    text-align: center;
+}
+
+.blockquote p:before, .blockquote p:after{
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #fff;
+    margin: 20px auto;
+}
+
+.blockquote cite{
+    font-family: 2em;
+    font-family: Arial;
+    font-weight: bold;
+    font-style: normal;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.buttonBudget{
+    background: transparent;
+    width: 140px;
+    height: 40px;
+    border: 4px solid #FEC63E;
+    padding: 5px 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #fff;
+    text-transform: uppercase;
+    color: #FEC63E;
+    margin: 20px auto;
+    transition: 0.2s;
+}
+
+.buttonBudget:hover{
+    background: #000;
+    transition: 0.2s;
+}
+
+/* PRODUTOS */
+
+.products{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin: 60px auto;
+}
+
+.products h2{
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 2px;
+}
+
+.products h2:after{
+    content: "";
+    display: block;
+    margin: 20px auto 60px auto;
+    width: 50px;
+    height: 3px;
+    background: #000;
+}
+
+.products_list{
+    display: flex;
+}
+
+.products_list li{
+    flex: 1;
+    background: #000;
+    max-width: 300px;
+    min-height: 300px;
+    margin: 20px 20px;
+    display: flex;
+    flex-flow: column;
+    color: #fff;
+}
+
+.products_list li p{
+    width: 250px;
+    text-align: left;
+}
+
+.product_image{
+    margin: 30px auto;
+}
+
+.product_description{
+    background: #FEC63E;
+    padding: 10px;
+}
+
+.product_description h2{
+    margin: 5px 0 10px 0;
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+} 
+
+.product_description h2:after{
+    content: "";
+    display: block;
+    margin: 5px auto 5px auto;
+    width: 50px;
+    height: 3px;
+    background: #000;
+} 
+
+.product_description p{
+    color: #000;
+    margin: 0 15px;
+}
+
+.products h3{
+    margin: 40px auto 15px auto;
+    display: block;
+}
+
+.productButton{
+    background: transparent;
+    width: 140px;
+    height: 40px;
+    border: 4px solid #FEC63E;
+    padding: 5px 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #fff;
+    text-transform: uppercase;
+    color: #FEC63E;
+    margin: 15px auto;
+    transition: 0.2s;
+}
+
+.productButton:hover{
+    background: #000;
+    transition: 0.2s;
+}
+
+/* PORTFÓLIO */
+
+.portfolio{
+    width: 100%;
+    background: #000;
+    padding: 10px 0 10px 0;
+}
+
+.portfolio h2{
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 2px;
+    margin-top: 35px;
+    color: #FEC63E;
+}
+
+.portfolio h2:after{
+    content: "";
+    display: block;
+    margin: 20px auto 60px auto;
+    width: 50px;
+    height: 3px;
+    background: #FEC63E;
+}
+
+.portfolio ul{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.portfolio li{
+    margin: 10px;
+}
+
+.portfolio h3{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 15px 0 10px 0;
+    color: #fff;
+}
+
+.portfolioButton{
+    background: transparent;
+    display: block;
+    width: 140px;
+    height: 40px;
+    border: 4px solid #FEC63E;
+    padding: 5px 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #fff;
+    text-transform: uppercase;
+    color: #FEC63E;
+    margin: 5px auto;
+    margin-bottom: 20px;
+    transition: 0.2s;
+}
+
+.portfolioButton:hover{
+    color: #fff;
+    border-color: #fff;
+    transition: 0.2s;
+}
+
+/* QUALIDADE */
+
+.quality{
+    margin: 60px auto;
+}
+
+.quality h2{
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 2px;
+}
+
+.quality h2:after{
+    content: "";
+    display: block;
+    margin: 20px auto 60px auto;
+    width: 50px;
+    height: 3px;
+    background: #000;
+}
+
+.quality ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.quality ul li{
+    padding: 15px 40px;
+}
+
+.quality ul li h3{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;              
+}
+
+.quality ul li h3:after{
+    content: "";
+    display: block;
+    margin: 10px auto;
+    width: 50px;
+    height: 3px;
+    background: #000;
+}
+
+.quality ul li p{
+    text-align: center;
+    width: 260px;
+}
+
+.quality h4{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 35px;
+    margin-bottom: 20px;
+}
+
+.aboutButton{
+    background: transparent;
+    display: block;
+    margin: auto;
+    width: 140px;
+    height: 40px;
+    border: 4px solid #FEC63E;
+    padding: 5px 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #fff;
+    text-transform: uppercase;
+    color: #FEC63E;
+    transition: 0.2s;
+}
+
+.aboutButton:hover{
+    background: #000;
+    transition: 0.2s;
+}
+
+/* TABLET */
+
+@media (max-width: 980px){
+    .products_list{
+        flex-direction: column;
+    }
+
+    .portfolio ul li{
+        flex: 1 1 300px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 787px){
+
+    .introduction{
+        margin-top: 0;
+        padding-top: 75px;
+        background: url('../../public/bg-mobile.jpg') no-repeat center;
+    }
+
+    .introduction h1{
+        width: 250px;
+        font-size: 2em;
+    }
+
+    .portfolio ul li{
+        flex: 2 1 200px;
+    }
+}
