@@ -28,6 +28,10 @@
     transition: 0.2s;
 }
 
+.active a{
+    background: red;
+}
+
 @media(min-width: 980px){
     .menu ul li + li{
         margin-left: 20px;
