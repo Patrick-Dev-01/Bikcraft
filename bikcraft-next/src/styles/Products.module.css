@@ -1,0 +1,233 @@
+/* PRODUTOS */
+
+.products_introduction{
+    width: 100%;
+    height: 160px;
+    background: url("../../public/bg-sobre.jpg") no-repeat center;
+    background-size: cover;
+    padding-top: 30px;
+    margin-top: 80px;
+}
+
+.products_introduction h1{
+    text-align: center;
+    font-size: 3em;
+    color: #fff;
+    font-family: Arial;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.products_introduction h1:after{
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #fff;
+    margin: 5px auto;
+}
+
+.products_introduction p{
+    text-align: center;
+    margin: 10px auto;
+    color: #fff;
+}
+
+/* Produtos container */
+
+.products{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 80px 0;
+}
+
+.products_container > div{
+    flex: 1;
+    display: grid;
+    align-items: center;
+    grid-template-areas: 
+        "image image icon icon"
+        "bike description description description"
+    ;
+    gap: 20px;
+}
+
+.products_container > div img{
+    position: relative;
+    z-index: 0;
+}
+
+.products_container > div h1{
+    color: #fff;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3em;
+    letter-spacing: 1px;
+    z-index: 1;
+    top: 100px;
+    left: 210px;
+    position: absolute;
+}
+
+.products_container > div h1:before, .products_container > div h1:after{
+    content: "";
+    background: #fff;
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin: 10px auto;
+}
+
+/* PRODUTO ITEM */
+
+.product_item{
+    max-width: 960px;
+    margin: 0 auto 60px auto;
+}
+
+/* MANTER TODOS OS ITENS DO GRID NA MESMA ALTURA */
+
+.image img, .bike, .icon, .description{
+    overflow-y: hidden;
+    height: 320px;
+}
+
+/* IMAGEM */
+
+.image{
+    position: relative;
+    grid-area: image;
+}
+
+/* ICONE */
+
+.icon{
+    grid-area: icon;
+    background: #000;
+    padding: 50px 10px;
+}
+
+.icon > div img{
+    width: 300px;
+    margin: 0 auto;
+}
+
+/* FOTO DO MODELO */
+
+.bike{
+    grid-area: bike;
+    width: 460px;
+}
+
+/* DESCRIÇÃO DA BIKE */
+
+.description{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #000;
+    grid-area: description;
+}
+
+.description p{
+    color: #fff;
+    font-size: 1.2em;
+    padding: 40px 30px;
+    text-align: left;
+}
+
+.description ul{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background: #FEC63E;
+}
+
+.description ul li{
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    letter-spacing: 1;
+    color: #000;
+    border: 2px solid #000;
+    padding: 10px;
+    flex: 1 1 170px;
+}
+
+.description ul li:nth-of-type(even){
+    border-right: none;
+}
+
+.description ul li:nth-of-type(odd){
+    border-left: none;
+}
+
+.description ul li:nth-of-type(3), .description ul li:nth-of-type(4){
+    border-bottom: none;
+}
+
+/* TABLET */
+
+@media (max-width: 980px){
+    .products{
+        align-items: center;
+    }
+
+    .products_container > div{
+        grid-template-areas: 
+            "image"
+            "icon"
+            "bike"
+            "description"
+        ;
+    }
+
+    .products_container > div h1{
+        left: 150px;
+    }
+
+    .image img, .bike, .bike img, .icon, .description{
+        width: 500px;
+    }
+
+    .icon > div{
+        padding: 10px 100px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 767px){
+    .products_introduction{
+        margin-top: 0;
+    }
+
+    .products_container > div h1{
+        font-size: 1.5em;
+        top: 50px;
+        left: 95px;
+    }
+
+    .image img, .bike, .bike img, .icon, .description{
+        width: 300px;
+    }
+
+    .icon div{
+        padding: 0;
+    }
+
+    .image img{
+        height: 180px;
+    }
+
+    .bike, .bike img{
+        height: initial;
+    }
+
+    .description ul li{
+        flex: 1 1 140px;
+        font-size: 12px;
+    }
+}
