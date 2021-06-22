@@ -17,7 +17,7 @@ export default function Header(){
                     <li className={styles.about ? styles.active : ''}><Link href="/about">Sobre</Link></li>
                     <li><Link href="/products">Produtos</Link></li>
                     <li><Link href="/portfolio">Portfólio</Link></li>
-                    <li><Link href="/contato">Contato</Link></li>
+                    <li><Link href="/contact">Contato</Link></li>
                 </ul>
             </nav>
         </header>

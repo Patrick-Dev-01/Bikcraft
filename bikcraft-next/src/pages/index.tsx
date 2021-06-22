@@ -78,7 +78,7 @@ export default function Home() {
         <ul>
           <li className={styles.passeio}><Image src={passeioBike} alt="Passeio"/></li>
           <li className={styles.retro}><Image src={retroBike} alt="Retro" /></li>
-          <li  className={styles.esporte}><Image src={esporteBike} alt="Esporte"/></li>
+          <li className={styles.esporte}><Image src={esporteBike} alt="Esporte"/></li>
         </ul>
 
         <h3>conheça mais o nosso portfólio</h3>

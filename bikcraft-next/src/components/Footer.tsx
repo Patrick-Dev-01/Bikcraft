@@ -28,18 +28,18 @@ export default function Footer(){
                     <div className={styles.contact}>
                         <h3>contato</h3>
                         <ul>
-                        <li>- (11) 9999-9999</li>
-                        <li>- contato@bikcraft.com</li>
-                        <li>- São Paulo - SP</li>
+                            <li>- (11) 9999-9999</li>
+                            <li>- contato@bikcraft.com</li>
+                            <li>- São Paulo - SP</li>
                         </ul>
                     </div>
 
                     <div className={styles.social_media}>
                         <h3>redes sociais</h3>
                         <ul>
-                        <li><Image src={facebook} alt="Facebook"/></li>
-                        <li><Image src={instagram} alt="Instagram"/></li>
-                        <li><Image src={twitter} alt="Twitter"/></li>
+                            <li><Image src={facebook} alt="Facebook"/></li>
+                            <li><Image src={instagram} alt="Instagram"/></li>
+                            <li><Image src={twitter} alt="Twitter"/></li>
                         </ul>
                     </div>
                 </div>

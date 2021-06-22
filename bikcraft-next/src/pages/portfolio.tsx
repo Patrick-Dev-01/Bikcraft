@@ -4,7 +4,10 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import styles from '../styles/Portfolio.module.css';
 import Image from 'next/image';
-import { useRef, useState } from 'react';
+
+import passeioBike from '../../public/portfolio/passeio.jpg';
+import esporteBike from '../../public/portfolio/esporte.jpg';
+import retroBike from '../../public/portfolio/retro.jpg';
 
 export default function Portfolio(){
 
@@ -19,9 +22,28 @@ export default function Portfolio(){
             <Header />
 
             <section className={styles.portfolio_introduction}>
-                <h1>Produtos</h1>
-                <p>conheça todos os nossos produtos</p>
+                <h1>Portfólio</h1>
+                <p>conheça mais o nosso portfólio</p>
             </section>
+
+            <section className={styles.portfolio_blockquote}>
+                <blockquote>
+                    &quot;No mundo atual, a continua expansão de nossa 
+                    atividade cumpre um papel essencial na formulação da gestão inovadora da qual fazemos parte.&quot; 
+
+                    <cite>Barbara Moss</cite>  
+                </blockquote>
+            </section>
+
+            <section className={styles.portfolio}>
+                <ul>
+                    <li className={styles.passeio}><Image src={passeioBike} alt="Passeio"/></li>
+                    <li className={styles.retro}><Image src={retroBike} alt="Retro" /></li>
+                    <li className={styles.esporte}><Image src={esporteBike} alt="Esporte"/></li>
+                </ul>
+            </section>
+
+            <Footer />
         </div>
     )
 }

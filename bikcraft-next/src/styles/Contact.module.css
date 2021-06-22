@@ -1,0 +1,153 @@
+/* CONTATO */
+
+.contact_introduction{
+    width: 100%;
+    height: 160px;
+    background: url("../../public/bg-contato.jpg") no-repeat center;
+    background-size: cover;
+    padding-top: 30px;
+    margin-top: 80px;
+}
+
+.contact_introduction h1{
+    text-align: center;
+    font-size: 3em;
+    color: #fff;
+    font-family: Arial;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.contact_introduction h1:after{
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #fff;
+    margin: 5px auto;
+}
+
+.contact_introduction p{
+    text-align: center;
+    margin: 10px auto;
+    color: #fff;
+}
+
+/* CONTATO FORMULÁRIO */
+
+.contact_form{
+    max-width: 960px;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+}
+
+.form label{
+    font-size: 18px;
+    font-style: normal;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 10px;
+}
+
+.form input{
+    width: 350px;
+    height: 35px;
+    border: 4px solid #FEC63E;
+    margin-bottom: 10px;
+}
+
+.form textarea{
+    height: 120px;
+    border: 4px solid #FEC63E;
+}
+
+.form button{
+    width: 140px;
+    height: 40px;
+    text-transform: uppercase;
+    background: none;
+    color: #FEC63E;;
+    border: 4px solid #FEC63E;
+    transition: 0.2s;
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+.form button:hover{
+    color: #000;
+    border-color: #000;
+    transition: 0.2s;
+}
+
+.contact_data{
+    margin: 0 0 0 150px;
+}
+
+.contact_data h3{
+    color: #FEC63E;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.contact_data span{
+    display: block;
+    line-height: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.contact_data span:nth-of-type(even){
+    margin-bottom: 20px;
+}
+
+.contact_data ul{
+    display: flex;
+}
+
+.contact_data ul li{
+    width: 50px;
+    height: 50px;
+    border: 4px solid #FEC63E;
+    margin: 5px 15px 0 1px;
+    padding: 8px;
+    overflow-y: hidden;
+}
+
+.address{
+    margin-top: 20px;
+}
+
+@media (max-width: 980px){
+    .contact_data{
+        margin: 0 auto;
+    }
+}
+
+/* MOBILE */
+
+@media only screen and (max-width: 787px){
+    .contact_introduction{
+        margin-top: 0;
+    }
+
+    .contact_form{
+        margin: 50px 10px;
+    }
+
+    .contact_form input{
+        width: 300px;
+    }
+
+    .contact_data{
+        margin: 0;
+    }
+
+    .address{
+        margin-top: 60px;
+    }
+}
