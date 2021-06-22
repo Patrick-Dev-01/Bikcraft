@@ -91,6 +91,21 @@
     overflow-y: hidden;
 }
 
+.social_media ul li{
+    width: 50px;
+    height: 50px;
+    border: 4px solid #FEC63E;
+    padding: 8px;
+    margin: 0 3px;
+    overflow-y: hidden;
+    transition: 0.2s;
+}
+
+.social_media ul li:hover{
+    border-color: #fff;
+    transition: 0.2s;
+}
+
 .social_media ul li + li{
     margin-left: 15px;
 }
@@ -123,5 +138,19 @@
 
     .rightsReserved{
         padding: 20px 20px;
+    }
+}
+
+@media(max-width: 520px){
+    .break{
+        height: fit-content;
+    }
+
+    .break blockquote p:before, .break blockquote p:after{
+        margin: 10px auto;
+    }
+
+    .break cite{
+        margin: 10px auto;
     }
 }

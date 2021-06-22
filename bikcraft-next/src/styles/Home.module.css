@@ -71,7 +71,8 @@
 }
 
 .buttonBudget:hover{
-    background: #000;
+    color: #fff;
+    border-color: #fff;
     transition: 0.2s;
 }
 
@@ -175,7 +176,8 @@
 }
 
 .productButton:hover{
-    background: #000;
+    color: #000;
+    border-color: #000;
     transition: 0.2s;
 }
 
@@ -208,13 +210,25 @@
 }
 
 .portfolio ul{
-    display: flex;
+    display: grid;
     justify-content: center;
-    flex-wrap: wrap;
+    grid-template-areas: 
+    "passeio retro"
+    "esporte esporte"
+    ;
+    gap: 20px;
 }
 
-.portfolio li{
-    margin: 10px;
+.passeio{
+    grid-area: passeio;
+}
+
+.retro{
+    grid-area: retro;
+}
+
+.esporte{
+    grid-area: esporte;
 }
 
 .portfolio h3{
@@ -329,19 +343,20 @@
 }
 
 .aboutButton:hover{
-    background: #000;
+    color: #000;
+    border-color: #000;
     transition: 0.2s;
 }
 
 /* TABLET */
 
-@media (max-width: 980px){
+@media (max-width: 950px){
     .products_list{
         flex-direction: column;
     }
 
-    .portfolio ul li{
-        flex: 1 1 300px;
+    .portfolio ul{
+        padding: 0 10px;
     }
 }
 
@@ -359,8 +374,14 @@
         width: 250px;
         font-size: 2em;
     }
+}
 
-    .portfolio ul li{
-        flex: 2 1 200px;
+@media (max-width: 480px){
+    .portfolio ul{
+        grid-template-areas: 
+        "passeio" 
+        "retro"
+        "esporte"
+        ;
     }
 }

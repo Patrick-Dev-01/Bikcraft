@@ -122,21 +122,17 @@
     margin-top: 20px;
 }
 
-@media (max-width: 980px){
-    .contact_data{
-        margin: 0 auto;
-    }
-}
+/* TABLET E MOBILE */
 
-/* MOBILE */
-
-@media only screen and (max-width: 787px){
+@media only screen and (max-width: 960px){
     .contact_introduction{
         margin-top: 0;
     }
 
     .contact_form{
-        margin: 50px 10px;
+        margin: 50px 20px;
+        flex-direction: column;
+        align-items: center;
     }
 
     .contact_form input{
@@ -145,6 +141,8 @@
 
     .contact_data{
         margin: 0;
+        justify-content: flex-start;
+        margin-right: 100px;
     }
 
     .address{

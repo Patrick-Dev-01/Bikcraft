@@ -37,9 +37,9 @@ export default function Footer(){
                     <div className={styles.social_media}>
                         <h3>redes sociais</h3>
                         <ul>
-                            <li><Image src={facebook} alt="Facebook"/></li>
-                            <li><Image src={instagram} alt="Instagram"/></li>
-                            <li><Image src={twitter} alt="Twitter"/></li>
+                            <li><a href="#"><Image src={facebook} alt="Facebook"/></a></li>
+                            <li><a href="#"><Image src={instagram} alt="Instagram"/></a></li>
+                            <li><a href="#"><Image src={twitter} alt="Twitter"/></a></li>
                         </ul>
                     </div>
                 </div>

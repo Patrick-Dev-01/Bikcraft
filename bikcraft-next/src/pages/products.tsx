@@ -113,6 +113,40 @@ export default function Products(){
                 </div>
             </section>
 
+            <section className={styles.budget}>
+                <h2>Orçamento</h2>
+                <div className={styles.budget_form}>
+                    <form action="" className={styles.form}>
+                        <label htmlFor="nome">Nome</label>
+                        <input type="text" />
+                        <label htmlFor="email">E-mail</label>
+                        <input type="text" />
+                        <label htmlFor="telefone">Telefone</label>
+                        <input type="text" />
+                        <label htmlFor="mensagem">Especificações</label>
+                        <textarea name="" id=""></textarea>
+
+                        <button type="submit">Enviar</button>
+                    </form>
+
+                    <div className={styles.budget_data}>
+                        <h3>Dados</h3>
+                        <span>+55 11 99999-9999</span>
+                        <span>orcamento@bikcraft.com</span>
+
+                        <h3>Monte sua Bikcraft</h3>
+                        <p>Determine as especificações</p>
+
+                        <ul>
+                            <li>- Cores</li>
+                            <li>- Estilo</li>
+                            <li>- Medidas</li>
+                            <li>- Acessórios</li>
+                            <li>- E Outros</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
             <Footer />
         </div>
     )
