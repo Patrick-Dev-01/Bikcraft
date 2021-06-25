@@ -8,6 +8,11 @@
 
 - Typescript
 - Next JS
+- Node JS
+- Jest
+- TDD
+- Knex JS
+- PostgreSQL
 
 ### Como testar?
 
