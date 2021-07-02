@@ -3,6 +3,12 @@ import request from 'supertest';
 import { app } from '../../app';
 
 describe('Doubt Tests', () => {
+    it('Should return true if phone has only numbers', () => {
+        const phone = '1199999999a';
+
+        expect(phone).not.toMatch(/^[0-9]*$/);
+    })
+    
     it('Should return 404 if some field are undefined', async () => {     
         const response = await request(app).post('/doubt').send({
             name: "",

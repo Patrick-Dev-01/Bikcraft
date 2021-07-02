@@ -8,6 +8,7 @@
 
 - Typescript
 - Next JS
+- React Unform + Yup
 - Node JS
 - Jest
 - TDD

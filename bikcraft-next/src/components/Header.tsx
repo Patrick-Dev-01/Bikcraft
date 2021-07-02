@@ -1,10 +1,14 @@
 import styles from '../styles/components/Header.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 import bikcraftLogo from '../../public/bikcraft.svg';
 
-export default function Header(){
+export default function Header({}){
+    const route = useRouter();
+
+    console.log(route.pathname)
 
     return(
         <header className={styles.header}>
@@ -14,10 +18,10 @@ export default function Header(){
 
             <nav className={styles.menu}>
                 <ul>
-                    <li className={styles.about ? styles.active : ''}><Link href="/about">Sobre</Link></li>
-                    <li><Link href="/products">Produtos</Link></li>
-                    <li><Link href="/portfolio">Portfólio</Link></li>
-                    <li><Link href="/contact">Contato</Link></li>
+                    <li><Link href="/about"><a className={`${route.pathname === '/about' ? styles.active : ''}`}>Sobre</a></Link></li>
+                    <li><Link href="/products"><a className={`${route.pathname === '/products' ? styles.active : ''}`}>Produtos</a></Link></li>
+                    <li><Link href="/portfolio"><a className={`${route.pathname === '/portfolio' ? styles.active : ''}`}>Portfólio</a></Link></li>
+                    <li><Link href="/contact"><a className={`${route.pathname === '/contact' ? styles.active : ''}`}>Contato</a></Link></li>
                 </ul>
             </nav>
         </header>

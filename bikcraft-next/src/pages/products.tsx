@@ -1,9 +1,14 @@
 import Head from 'next/head';
+import { useCallback, useRef } from 'react';
+import { Success } from '../shared/Success';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import styles from '../styles/Products.module.css';
 import Image from 'next/image';
+import { Form } from '@unform/web';
+import { FormHandles } from '@unform/core';
+import * as yup from 'yup';
 
 import passeio_1 from '../../public/produtos/bikcraft-passeio-1.jpg';
 import passeio_2 from '../../public/produtos/bikcraft-passeio-2.jpg';
@@ -14,8 +19,55 @@ import retro_2 from '../../public/produtos/bikcraft-retro-2.jpg';
 import passeio from '../../public/produtos/passeio.svg';
 import esporte from '../../public/produtos/esporte.svg';  
 import retro from '../../public/produtos/retro.svg';  
+import Input from '../components/Input';
+import Textarea from '../components/Textarea';
+
+interface FormData{
+    name: string;
+    email: string;
+    phone: string;
+    specifications: string;
+}
 
 export default function Products(){
+
+    const formRef = useRef<FormHandles>(null)
+
+    const handleSubmit = useCallback(async (data: FormData) => {
+        try{
+            const schema = yup.object().shape({
+                name: yup.string().required('O Nome é obrigatório'),
+                email: yup.string()
+                .email('Digite um E-mail válido')
+                .required('O E-mail é obrigatório'),
+
+                phone: yup.string().required('O Telefone é obrigatório').matches(/^[0-9]*$/, 'Digite apenas números')
+                .min(11, 'O Telefone precisa ter 11 digitos')
+                .max(11, 'O Telefone precisa ter 11 digitos'),
+
+                specifications: yup.string().required('Descreva as especificações da sua Bikcraft')
+            })
+
+            await schema.validate(data, {
+                abortEarly: false
+            })
+
+            formRef.current?.setErrors({})
+            formRef.current?.reset();
+
+        } catch (err) {
+            if(err instanceof yup.ValidationError){
+                let errorMessages = {};
+
+                err.inner.forEach(error => {
+                    errorMessages[error.path] = error.message;
+                })
+
+                formRef.current?.setErrors(errorMessages)
+            }
+        }
+    }, [])
+
     return(
         <div>
             <Head>
@@ -32,6 +84,7 @@ export default function Products(){
             </section>
 
             <section className={styles.products}>
+                <Success />
                 <div className={styles.products_container}>
                     <div className={styles.product_item}>
                         <div className={styles.image}>
@@ -116,18 +169,18 @@ export default function Products(){
             <section className={styles.budget}>
                 <h2>Orçamento</h2>
                 <div className={styles.budget_form}>
-                    <form action="" className={styles.form}>
+                    <Form ref={formRef} onSubmit={handleSubmit} className={styles.form}>
                         <label htmlFor="nome">Nome</label>
-                        <input type="text" />
+                        <Input name="name"/>
                         <label htmlFor="email">E-mail</label>
-                        <input type="text" />
+                        <Input name="email"/>
                         <label htmlFor="telefone">Telefone</label>
-                        <input type="text" />
-                        <label htmlFor="mensagem">Especificações</label>
-                        <textarea name="" id=""></textarea>
+                        <Input name="phone"/>
+                        <label htmlFor="orcamento">Especificações</label>
+                        <Textarea name="specifications"/>
 
                         <button type="submit">Enviar</button>
-                    </form>
+                    </Form>
 
                     <div className={styles.budget_data}>
                         <h3>Dados</h3>

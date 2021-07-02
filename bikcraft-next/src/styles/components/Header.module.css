@@ -19,7 +19,6 @@
     font-weight: bold;
     text-transform: uppercase;
     padding: 0px 10px;
-    color: #000;
     transition: 0.2s;
 }
 
@@ -28,8 +27,12 @@
     transition: 0.2s;
 }
 
-.active a{
-    background: red;
+.menu ul li a:not(.active){
+    color: #000;
+}
+
+.active{
+    color: #fff;
 }
 
 @media(min-width: 980px){
