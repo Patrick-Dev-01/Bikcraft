@@ -7,9 +7,7 @@ import bikcraftLogo from '../../public/bikcraft.svg';
 
 export default function Header({}){
     const route = useRouter();
-
-    console.log(route.pathname)
-
+    
     return(
         <header className={styles.header}>
             <div className={styles.logo_header}>

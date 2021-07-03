@@ -4,8 +4,9 @@ import { Error } from '../shared/Error';
 
 interface ModalContextData{
     modalId: string;
+    openModal: boolean;
     showModal: (id: string) => void;
-    closeModal: () => void;
+    hideModal: () => void;
 }
 
 interface ModalProps{
@@ -21,25 +22,30 @@ export default function ModalProvider({ children }: ModalProps){
     function showModal(id: string){
         setModalId(id);
         setOpenModal(true);
+
+        setTimeout(() => {
+            hideModal();
+        }, 5000)
     }
 
-    function closeModal(){
+    function hideModal(){
         setOpenModal(false)
     }
 
     return(
         <ModalContext.Provider value={{
             modalId,
+            openModal,
             showModal,
-            closeModal,
+            hideModal
         }}>
             
             { children }
-            {/* { openModal && (
+            { openModal && (
                 modalId === 'success' ? <Success /> :
                 modalId === 'error' ? <Error /> :
                 <></>
-            )} */}
+            )}
            
         </ModalContext.Provider>
     )

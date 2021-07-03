@@ -9,6 +9,10 @@ import Image from 'next/image';
 import { Form } from '@unform/web';
 import { FormHandles } from '@unform/core';
 import * as yup from 'yup';
+import api from '../services/api';
+import Input from '../components/Input';
+import Textarea from '../components/Textarea';
+import useModal from '../hooks/useModal';
 
 import passeio_1 from '../../public/produtos/bikcraft-passeio-1.jpg';
 import passeio_2 from '../../public/produtos/bikcraft-passeio-2.jpg';
@@ -19,8 +23,6 @@ import retro_2 from '../../public/produtos/bikcraft-retro-2.jpg';
 import passeio from '../../public/produtos/passeio.svg';
 import esporte from '../../public/produtos/esporte.svg';  
 import retro from '../../public/produtos/retro.svg';  
-import Input from '../components/Input';
-import Textarea from '../components/Textarea';
 
 interface FormData{
     name: string;
@@ -30,8 +32,8 @@ interface FormData{
 }
 
 export default function Products(){
-
-    const formRef = useRef<FormHandles>(null)
+    const { showModal } = useModal();
+    const formRef = useRef<FormHandles>(null);
 
     const handleSubmit = useCallback(async (data: FormData) => {
         try{
@@ -55,6 +57,12 @@ export default function Products(){
             formRef.current?.setErrors({})
             formRef.current?.reset();
 
+            await api.post(`/budget`, data).then(response => {
+                showModal('success')
+            }).catch(err => {
+                showModal('error')
+            });
+
         } catch (err) {
             if(err instanceof yup.ValidationError){
                 let errorMessages = {};
@@ -66,7 +74,7 @@ export default function Products(){
                 formRef.current?.setErrors(errorMessages)
             }
         }
-    }, [])
+    }, [showModal])
 
     return(
         <div>

@@ -1,11 +1,16 @@
+import useModal from '../hooks/useModal';
 import styles from '../styles/components/Modal.module.css';
 
 export function Success(){
+    const { openModal } = useModal();
+
     return(
-        <div className={styles.overlay}>
-            <div className={styles.modal}>
+        <div className={styles.overlay} style={{ display: `${openModal ? 'block' : 'none'}`}}>
+            <div className={`${styles.modal} ${styles.success}`}>
                 <h1>Sucesso!</h1>
-                <p>Seu orçamento foi enviado para nossa equipe e em breve entraremos em contato para mais informações </p>
+                <p>Seus dados foram enviados para nossa equipe e em breve entraremos em contato para mais informações.</p>
+
+                <div className={styles.progressbarSuccess}></div>
             </div>
         </div>
     )

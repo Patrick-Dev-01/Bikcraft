@@ -8,7 +8,7 @@ interface TextareaProps{
 export default function Textarea({ name, ...rest }: TextareaProps){
     const textareaRef = useRef<HTMLTextAreaElement>(null);
 
-    const { fieldName, defaultValue, registerField, error } = useField(name);
+    const { fieldName, defaultValue, registerField, error, clearError } = useField(name);
     
     useEffect(() => {
         registerField({
@@ -20,7 +20,9 @@ export default function Textarea({ name, ...rest }: TextareaProps){
 
     return (
         <>
-            <textarea ref={textareaRef} name={name} defaultValue={defaultValue} {...rest}/>
+            <textarea ref={textareaRef} name={name} defaultValue={defaultValue} 
+            {...rest}
+            onFocus={clearError}/>
             { error && <span style={{ color: '#f00' }}>{ error }</span> }
         </>
     )

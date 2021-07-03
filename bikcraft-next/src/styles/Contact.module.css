@@ -62,9 +62,14 @@
     margin-bottom: 10px;
 }
 
+.form span{
+    margin: 0 0 10px 0;
+}
+
 .form textarea{
     height: 120px;
     border: 4px solid #FEC63E;
+    margin-bottom: 10px;
 }
 
 .form button{
