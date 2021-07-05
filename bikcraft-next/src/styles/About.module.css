@@ -101,12 +101,6 @@
     background: #000;
 }
 
-.quality div{
-    display: block;
-    margin: 0 auto 20px auto;
-    z-index: 1;
-}
-
 .quality ul{
     display: flex;
     flex-wrap: wrap;
@@ -115,6 +109,12 @@
 
 .quality ul li{
     padding: 15px 40px;
+}
+
+.quality div{
+    display: block;
+    margin: 0 auto 20px auto;
+    z-index: 1;
 }
 
 .quality ul li h3{

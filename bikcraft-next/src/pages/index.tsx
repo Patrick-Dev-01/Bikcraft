@@ -11,6 +11,7 @@ import retro from '../../public/produtos/retro.svg';
 import passeioBike from '../../public/portfolio/passeio.jpg';
 import esporteBike from '../../public/portfolio/esporte.jpg';
 import retroBike from '../../public/portfolio/retro.jpg';
+import bikcraftQualidade from '../../public/bikcraft-qualidade.svg';
 
 export default function Home() {
   return (
@@ -87,7 +88,9 @@ export default function Home() {
 
       <section className={styles.quality}>
         <h2>Qualidade</h2>
-
+        <div>
+          <Image src={bikcraftQualidade} alt="Qualidade" />
+        </div>
         <ul>
           <li>
             <h3>Durabilidade</h3>
